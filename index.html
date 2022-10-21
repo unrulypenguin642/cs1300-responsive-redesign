@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Responsive Redesign</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css" /> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar fixed-top navbar-expand-md">
+    <a class="navbar-brand" href="#home">CS1300</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenuIcon">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto mb-2">
+        <li><a class="nav-link" href="#background">BACKGROUND</a></li>
+        <li><a class="nav-link" href="#usability">USABILITY</a></li>
+        <li><a class="nav-link" href="#prototyping">PROTOTYPING</a></li>
+        <li><a class="nav-link" href="#implementation">IMPLEMENTATION</a></li>
+      </ul>
+    </div>
+ </nav>
+
+
+<div id="title" class="container-fluid text-center">
+  <br>
+  <br>
+  <h1>Responsive Redesign: Designing a webpage for Heng Thai & Rotisserie</h1>
+</div>
+
+<div id="background" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>BACKGROUND</h2>
+      <h4>In this project, I redesigned <a href="https://www.hengpvd.com/home">Heng Thai & Rotisserie's</a> website to be more responsive and address existing usability issues. I chose this website because Heng is my favorite restaurant in Providence, and I believe that if it had a more user friendly website, it would bring in more customers and allow more people to taste this delicious food. </h4>
+
+      <p>
+        <strong>OBJECTIVE:</strong> 
+        To better understand how to design a webpage focusing on its usability, I examined a website and analyzed its usability issues, then created both low-fidelity and high-fidelity prototypes for my new website design. I then built the website using only HTML and CSS (with Bootstrap). 
+      </p> 
+      
+    </div>
+  </div>
+</div>
+
+<div id="usability" class="container-fluid bg-grey">
+  <h2 class="center-header">IDENTIFYING USABILITY ISSUES</h2>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <a href="heng-annotated.png" target="_blank"><img class="img-fluid" src="heng-current.PNG" alt="Screenshot of the current Heng page"></a>
+    </div>
+    <div class="col-sm-6">
+      <h4>First, I started by looking at the existing webpage and determining the main usability issues that could be addressed in a redesign. On the left is a screenshot of the existing webpage. You can click on the image to view an annotated image of the full webpage and its usability issues. My findings are also summarized below: </h4>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <h4><strong> Summary: Usability Issues</strong></h4>
+      <ol>
+        <li><b>Confusing section:</b> There is a section on "Thai street food" which may be somewhat memorable but feels confusing and out of place. It doesn't seem to pertain to the restaurant directly and doesn't contain any of Heng's own photos. It also contains a variety of fonts which makes the page feel less cohesive.</li>
+        <li><b>Lack of hierarchy:</b> The hierarchy on the page is confusing. The important information that a user would want to know about a restaurant (e.g. location, phone number, business hours) are all in smaller text relative to the text in the aforementioned "Thai street food section". This makes it more difficult for users to find the information they may need.</li>
+        <li><b>Responsiveness:</b> All of the font sizes on mobile devices are quite small. The "Submit" button on the contact section is covered by a bottom panel on certain screen sizes, making it difficult to press. The navbar on the phone is the same as a desktop, making the links very small and hard to click. </li>
+        <li><b>Hidden links in navbar: </b>The "Contact" and "Gallery" buttons in the navigation bar are hidden in "More" even though there is plenty of space in the navbar.</li> 
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>
+        To examine accessibility issues, I ran the Web Accessibility Evaluation Tool (WAVE) on Heng’s webpage. Based on the results, I noticed the following concerns:
+      </h4>
+
+      <h4><strong> Summary: Accessibility Issues</strong></h4>
+      <ol>
+        <li><b>Low contrast & empty headings: </b>Using this tool, I found that there are 14 very low contrast errors and 7 empty heading errors. While I personally didn't find all of the text detected as being low contrast to be particularly low contrast, I can understand how users who are visually impaired may find this more difficult to read. The empty headings may also interfere with screen readers. </li>
+
+        <li><b>Language accessibility: </b> There is only one language on the main page, although the menu is in both Thai and English on the menu page of the website. Interestingly, while the menu contains Thai the rest of the page does not, making it more difficult for Thai users to navigate. </li>
+
+        <li><b>Lack of alternative text: </b> None of the images on the page have alternative text, which would make it more difficult for screen readers to use.</li>
+      </ol>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div id="prototyping" class="container-fluid">
+  <h2>Prototyping: Hi-Fi & Lo-Fi</h2>
+
+  <h3>Low-Fidelity Prototyping</h3>
+  <h4>After identifying the main usability issues in the existing website, I then designed low-fidelity wireframes using Balsamiq with these usability and accessibility issues in mind: </h4>
+  <img class="img-fluid" src="lo-fi-prototypes.png">
+  <h4>When developing my wireframes, I had a harder time resolving the accessibility issues compared to the usability issues. I think this is because the accessibility issues I noticed are less easily solved by the layout and design of the low-fidelity prototype. Instead, accessibility features such as high-contrast text and alternative text for media elements are more easily illustrated in the hi-fi prototype or even the final website.</h4>
+</div>
+
+<div class="container-fluid bg-grey">
+  <h3>Style Guide & High-Fidelity Prototyping</h3>
+
+  <h4>Once I developed my wireframes, I then created a style guide consisting of the color scheme, typography, and reusable components I intended to use when developing the hi-fi prototypes. I drew inspiration from the current webpage when choosing the colors and font styles of the page. Below is my style guide: </h4>
+
+  <div class="text-center">
+    <img class="img-fluid" src="style-guide.png">
+  </div>
+
+  <h4>Using the components and other visual elements from my style guide, I created the following three high-fidelity prototypes using Figma. Since I planned to use Bootstrap, I mainly used Bootstrap classes and the Bootstrap grid, which are tools built upon flexbox. Below are the three prototypes, annotated with styling decisions made to help create the desired layout: </h4>
+
+  <img class="img-fluid" src="annotated hi-fi.png">
+</div>
+
+<div id="implementation" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Design Implementation: Coding the Website</h2>
+      <h4>Once I was happy with my hi-fi prototypes, I began to code my webpage using Bootstrap as a CSS framework. You can access the website <a href="https://unrulypenguin642.github.io/cs1300-heng-redesign/" target="_blank">here</a> as well as via the embedding below: </h4>
+      <div id="embed" class="container-fluid text-center" style="max-height: 100vh">
+        <iframe width="450" height="700" src="https://unrulypenguin642.github.io/cs1300-heng-redesign/" title="My Redesigned Webpage"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="summary" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Summary & Takeaways</h2>
+      <h4> Overall, this project was my first attempt at redesigning a website with design principles in mind. </h4>
+      <ul>
+        <li> I learned about how to analyze usability and accessibility issues that websites may have.</li>
+        <li> I designed wireframes and hi-fi prototypes to visualize how the redesigned responsive page would look on various devices.</li>
+        <li> I created a visual style guide for me to use when coding up the responsive webpage.</li>
+        <li> I developed the responsive webpage I designed using HTML and CSS. From this, I gained a lot more experience with creating responsive webpages using Bootstrap.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
